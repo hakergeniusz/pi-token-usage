@@ -580,6 +580,10 @@ export default function (pi: ExtensionAPI) {
 	pi.registerTool({
 		name: "token_usage",
 		label: "Token Usage",
+		// Deferred: not declared in every request; tool_search finds and
+		// activates it when the agent needs usage numbers. /token-usage still
+		// covers the human path.
+		exposure: "deferred",
 		description: "Query token and cost usage for the current session or globally across all pi sessions.",
 		parameters: Type.Object({
 			scope: StringEnum(["session", "global", "models", "days"] as const, {

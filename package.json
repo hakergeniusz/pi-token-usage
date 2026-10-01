@@ -1,6 +1,6 @@
 {
   "name": "pi-token-usage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Global token and cost accounting for pi, with a per-model breakdown",
   "type": "module",
   "license": "MIT",
